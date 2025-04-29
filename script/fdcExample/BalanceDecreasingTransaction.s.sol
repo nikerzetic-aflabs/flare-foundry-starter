@@ -8,6 +8,7 @@ import {Strings} from "@openzeppelin-contracts/utils/Strings.sol";
 import {ContractRegistry} from "dependencies/flare-periphery-0.0.22/src/coston2/ContractRegistry.sol";
 import {IFdcHub} from "dependencies/flare-periphery-0.0.22/src/coston2/IFdcHub.sol";
 import {IFlareSystemsManager} from "dependencies/flare-periphery-0.0.22/src/coston2/IFlareSystemsManager.sol";
+// solhint-disable-next-line
 import {IBalanceDecreasingTransaction} from "dependencies/flare-periphery-0.0.22/src/coston2/IBalanceDecreasingTransaction.sol";
 import {TransferEventListener} from "src/FdcTransferEventListener.sol";
 import {Base as StringsBase} from "src/utils/fdcStrings/Base.sol";
@@ -18,8 +19,14 @@ import {Base} from "./Base.s.sol";
 string constant attestationTypeName = "BalanceDecreasingTransaction";
 string constant dirPath = "data/";
 
-// Run with command
-//      forge script script/fdcExample/BalanceDecreasingTransaction.s.sol:PrepareAttestationRequest --rpc-url $COSTON2_RPC_URL --ffi
+/*
+
+Run with command
+
+forge script script/fdcExample/BalanceDecreasingTransaction.s.sol:PrepareAttestationRequest \
+    --rpc-url $COSTON2_RPC_URL --ffi
+
+*/
 
 contract PrepareAttestationRequest is Script {
     using Surl for *;

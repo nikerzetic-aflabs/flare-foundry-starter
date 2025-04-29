@@ -6,7 +6,7 @@ import {HelloWorld} from "src/HelloWorld.sol";
 import {Strings} from "@openzeppelin-contracts/utils/Strings.sol";
 
 contract HelloWorldTest is Test {
-    HelloWorld helloWorld;
+    HelloWorld public helloWorld;
 
     function setUp() public {
         helloWorld = new HelloWorld("Alderaan");
