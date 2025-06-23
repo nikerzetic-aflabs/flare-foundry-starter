@@ -38,6 +38,7 @@ coston2 = "${COSTON2_RPC_URL}"
 songbird = "${SONGBIRD_RPC_URL}"
 flare = "${FLARE_RPC_URL}"
 
+# TODO
 [etherscan]
 coston = { key = "X", chain = 16, url = "${COSTON_RPC_URL}" }
 coston2 = { key = "X", chain = 114, url = "${COSTON2_RPC_URL}" }
