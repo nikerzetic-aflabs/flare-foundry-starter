@@ -276,4 +276,11 @@ library Base {
             }
         }
     }
+
+    function isRoundFinalized(
+        string memory votingRoundId
+    ) internal returns (bool) {
+        uint256 roundId = Strings.parseUint(votingRoundId);
+        return ContractRegistry.getRelay().isFinalized(200, roundId);
+    }
 }
