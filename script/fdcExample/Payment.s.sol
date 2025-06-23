@@ -154,6 +154,12 @@ contract RetrieveDataAndProof is Script {
         console.log("votingRoundId: %s\n", votingRoundId);
         console.log("requestBytes: %s\n", requestBytes);
 
+        // Waiting for the round to finalize
+        if (!Base.isRoundFinalized(votingRoundId)) {
+            console.log("Round is not yet finalized. Try again later.\n");
+            return;
+        }
+
         // Preparing the proof request
         string[] memory headers = Base.prepareHeaders(apiKey);
         string memory body = string.concat(
